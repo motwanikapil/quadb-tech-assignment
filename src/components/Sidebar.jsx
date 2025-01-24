@@ -16,18 +16,27 @@ export default function Sidebar() {
   return (
     <main
       className={`${
-        theme === 'dark' ? 'dark:bg-[#1f1f1f] dark:text-[#f5f5f5]' : ''
-      } absolute top-15 flex h-screen w-52 flex-col gap-5 overflow-auto border-2 border-gray-400 p-3 text-center sm:relative sm:w-lg`}
+        theme === 'dark'
+          ? 'dark:bg-[#1f1f1f] dark:text-[#f5f5f5]'
+          : 'bg-[#f5f5f5] text-black'
+      } top-15 flex h-screen flex-col gap-5 overflow-auto border-2 border-gray-400 p-3 pt-5 text-center sm:static sm:mt-3`}
     >
       <Profile />
+      <hr className='my-3 text-gray-400' />
       <ul>
         <li>All Tasks</li>
+        <hr className='my-3 text-gray-400' />
         <li>Today</li>
+        <hr className='my-3 text-gray-400' />
         <li>Important</li>
+        <hr className='my-3 text-gray-400' />
         <li>Planned</li>
+        <hr className='my-3 text-gray-400' />
         <li>Assigned to me</li>
       </ul>
+      <hr className='my-3 text-gray-400' />
       <p>+ Add List</p>
+      <hr className='my-3 text-gray-400' />
       <TodaysTasks />
     </main>
   )
